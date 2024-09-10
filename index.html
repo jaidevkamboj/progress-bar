@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Section</title>
+  <style>
+    /* General Section Styles */
+    .happy-section {
+      background-color: #FF7B02;
+      max-width: 400px; /* Max width for larger screens */
+      margin: 0 auto; /* Center the section horizontally */
+      padding: 10px;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    /* Row styles */
+    .happy-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0px;
+    }
+
+    /* Column 1 & 3 Button Styles */
+    .happy-col-1, .happy-col-3 {
+      width: 81.09px; /* Fixed width for buttons */
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .happy-button {
+      width: 100%;
+      height: 100%;
+      background-color: #ffffff;
+      color: #00AA54;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    /* Column 2 & 4 Text and Progress Bar Styles */
+    .happy-col-2, .happy-col-4 {
+    flex: 1;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: -18px;
+}
+
+    .happy-text {
+      font-size: 20px;
+      font-weight: 500;
+      color: #ffffff;
+      margin-bottom: 5px;
+      font-family: sans-serif;
+    }
+
+    .progress-bar {
+      width: 100%;
+      background-color: #f3f3f3;
+      border-radius: 5px;
+      overflow: hidden;
+      height: 5px;
+    }
+
+    .progress {
+      height: 100%;
+      background-color: #10D0A1;
+    }
+
+    /* Progress bar widths */
+    .progress-95 {
+      width: 95%;
+    }
+
+    .progress-85 {
+      width: 85%;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .happy-section {
+        max-width: 300px; /* Adjust for tablets */
+      }
+
+      .happy-button {
+        font-size: 14px;
+      }
+
+      .happy-text {
+        font-size: 14px;
+      }
+
+      .happy-progress-bar {
+        height: 8px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .happy-section {
+        max-width: 250px; /* Adjust for mobile */
+      }
+
+      .happy-button {
+        font-size: 12px;
+      }
+
+      .happy-text {
+        font-size: 12px;
+      }
+
+      .happy-progress-bar {
+        height: 6px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="happy-section">
+    <!-- First Row -->
+    <div class="happy-row">
+      <div class="happy-col-1">
+        <button class="happy-button">95%</button>
+      </div>
+      <div class="happy-col-2">
+        <p class="happy-text">Happy Customers</p>
+        <div class="progress-bar">
+          <div class="progress progress-95"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second Row -->
+    <div class="happy-row">
+      <div class="happy-col-3">
+        <button class="happy-button">85%</button>
+      </div>
+      <div class="happy-col-4">
+        <p class="text">10 year of experience</p>
+        <div class="progress-bar">
+          <div class="progress progress-85"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
